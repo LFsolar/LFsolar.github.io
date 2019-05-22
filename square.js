@@ -1,10 +1,19 @@
 /* javascript test page */
 
-function draw() {
-	var square = document.getElelmentById('square');
-	if(square.getContext) {
-		var ctx = square.getContext('2d');
-		
-		ctx.fillRect(50,50, 100, 100);
-	}
+
+function draw()
+  {
+var canvas = document.getElementById('circle');
+if (canvas.getContext)
+{
+var ctx = canvas.getContext('2d'); 
+var X = canvas.width / 2;
+var Y = canvas.height / 2;
+var R = 45;
+ctx.beginPath();
+ctx.arc(X, Y, R, 0, 2 * Math.PI, false);
+ctx.lineWidth = 3;
+ctx.strokeStyle = '#FF0000';
+ctx.stroke();
+}
 }
