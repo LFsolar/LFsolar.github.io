@@ -3,14 +3,21 @@
 <head>
 	<title>Something with javascript</title>
 	<script>
+  		var on = true;
 		function changeText() {
-			document.getElementById("demo").innerHTML = "Text changed.";
+    			if(on === true) {
+				document.getElementById("demo").innerHTML = "Text changed.";
+       				on = false;
+        		} else {
+        			document.getElementById("demo").innerHTML = "Text reverted."
+        			on = true;
+        		}
 		}
 	</script>
 </head>
 <body>
 	<h1>A simple javascript <i>something</i>:</h1>
-	<p id="demo">An unchnaged Paragraph</p>
+	<p id="demo">An unchanged Paragraph</p>
 	<button type="btn" onclick="changeText()">Push me</button>
 
 </body>
