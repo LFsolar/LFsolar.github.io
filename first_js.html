@@ -2,11 +2,16 @@
 <html>
 <head>
 	<title>Something with javascript</title>
+	<script>
+		function changeText() {
+			document.getElementById("demo").innerHTML = "Text changed.";
+		}
+	</script>
 </head>
 <body>
 	<h1>A simple javascript <i>something</i>:</h1>
-
-
+	<p id="demo">An unchnaged Paragraph</p>
+	<button type="btn" onclick="changeText()">Push me</button>
 
 </body>
 </html>
